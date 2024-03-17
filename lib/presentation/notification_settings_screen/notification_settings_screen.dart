@@ -1,0 +1,21 @@
+import 'package:almohsen_s_hotel_s/widgets/app_bar/custom_app_bar.dart';import 'package:almohsen_s_hotel_s/widgets/app_bar/appbar_leading_image.dart';import 'package:almohsen_s_hotel_s/widgets/app_bar/appbar_title.dart';import 'package:almohsen_s_hotel_s/widgets/custom_switch.dart';import 'package:flutter/material.dart';import 'package:almohsen_s_hotel_s/core/app_export.dart';import 'controller/notification_settings_controller.dart';class NotificationSettingsScreen extends GetWidget<NotificationSettingsController> {const NotificationSettingsScreen({Key? key}) : super(key: key);
+
+@override Widget build(BuildContext context) { return SafeArea(child: Scaffold(appBar: _buildAppBar(), body: Container(width: double.maxFinite, padding: EdgeInsets.symmetric(horizontal: 24.h, vertical: 27.v), child: Column(children: [_buildNotificationSettingsAutoLayoutHorizontal1(), SizedBox(height: 31.v), _buildNotificationSettingsAutoLayoutHorizontal2(), SizedBox(height: 31.v), _buildNotificationSettingsAutoLayoutHorizontal3(), SizedBox(height: 31.v), _buildNotificationSettingsAutoLayoutHorizontal4(), SizedBox(height: 30.v), _buildNotificationSettingsAutoLayoutHorizontal5(), SizedBox(height: 31.v), _buildNotificationSettingsAutoLayoutHorizontal6(), SizedBox(height: 5.v)])))); } 
+/// Section Widget
+PreferredSizeWidget _buildAppBar() { return CustomAppBar(height: 52.v, leadingWidth: 52.h, leading: AppbarLeadingImage(imagePath: ImageConstant.imgArrowDown, margin: EdgeInsets.only(left: 24.h, top: 11.v, bottom: 13.v), onTap: () {onTapArrowDown();}), title: AppbarTitle(text: "lbl_notifications".tr, margin: EdgeInsets.only(left: 16.h))); } 
+/// Section Widget
+Widget _buildNotificationSettingsAutoLayoutHorizontal1() { return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Padding(padding: EdgeInsets.only(bottom: 1.v), child: Text("msg_general_notification".tr, style: CustomTextStyles.titleMediumSemiBold_1)), Obx(() => CustomSwitch(value: controller.isSelectedSwitch.value, onChange: (value) {controller.isSelectedSwitch.value = value;}))]); } 
+/// Section Widget
+Widget _buildNotificationSettingsAutoLayoutHorizontal2() { return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Padding(padding: EdgeInsets.only(bottom: 1.v), child: Text("lbl_sound".tr, style: CustomTextStyles.titleMediumSemiBold_1)), Obx(() => CustomSwitch(value: controller.isSelectedSwitch1.value, onChange: (value) {controller.isSelectedSwitch1.value = value;}))]); } 
+/// Section Widget
+Widget _buildNotificationSettingsAutoLayoutHorizontal3() { return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Padding(padding: EdgeInsets.only(bottom: 1.v), child: Text("lbl_vibrate".tr, style: CustomTextStyles.titleMediumSemiBold_1)), Obx(() => CustomSwitch(value: controller.isSelectedSwitch2.value, onChange: (value) {controller.isSelectedSwitch2.value = value;}))]); } 
+/// Section Widget
+Widget _buildNotificationSettingsAutoLayoutHorizontal4() { return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Padding(padding: EdgeInsets.only(top: 3.v), child: Text("lbl_app_updates".tr, style: CustomTextStyles.titleMediumSemiBold_1)), Obx(() => CustomSwitch(value: controller.isSelectedSwitch3.value, onChange: (value) {controller.isSelectedSwitch3.value = value;}))]); } 
+/// Section Widget
+Widget _buildNotificationSettingsAutoLayoutHorizontal5() { return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Padding(padding: EdgeInsets.only(bottom: 1.v), child: Text("msg_new_service_available".tr, style: CustomTextStyles.titleMediumSemiBold_1)), Obx(() => CustomSwitch(value: controller.isSelectedSwitch4.value, onChange: (value) {controller.isSelectedSwitch4.value = value;}))]); } 
+/// Section Widget
+Widget _buildNotificationSettingsAutoLayoutHorizontal6() { return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Padding(padding: EdgeInsets.only(top: 3.v), child: Text("msg_new_tips_available".tr, style: CustomTextStyles.titleMediumSemiBold_1)), Obx(() => CustomSwitch(value: controller.isSelectedSwitch5.value, onChange: (value) {controller.isSelectedSwitch5.value = value;}))]); } 
+
+/// Navigates to the previous screen.
+onTapArrowDown() { Get.back(); } 
+ }

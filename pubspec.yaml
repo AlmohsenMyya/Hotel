@@ -1,0 +1,50 @@
+name: almohsen_s_hotel_s
+description: A new Flutter project.
+version: 1.0.0+1
+environment: 
+  sdk: '>=2.12.0 <3.0.0'
+dependencies: 
+  flutter: 
+    sdk: flutter
+  get: ^4.6.6
+  connectivity_plus: ^5.0.2
+  shared_preferences: ^2.2.2
+  cached_network_image: ^3.3.0
+  flutter_svg: ^2.0.9
+  flutter_login_facebook: ^1.6.2
+  google_sign_in: ^5.0.7
+  pin_code_fields: ^8.0.1
+  country_pickers: ^2.0.0
+  smooth_page_indicator: ^1.1.0
+  sms_autofill: ^2.3.0
+  readmore: ^2.2.0
+  google_maps_flutter: ^2.5.0
+  calendar_date_picker2: ^0.5.3
+  flutter_svg_provider: ^1.0.7
+  qr_flutter: ^4.1.0
+  intl: ^0.18.0
+  fluttertoast: ^8.2.4
+  url_launcher: ^6.2.4
+  permission_handler: ^11.1.0
+  images_picker: ^1.2.11
+dev_dependencies: 
+  flutter_test: 
+    sdk: flutter
+flutter: 
+  uses-material-design: true
+  assets: 
+    - assets/
+    - assets/images/
+  fonts: 
+    - family: Urbanist
+      fonts: 
+        - asset: assets/fonts/UrbanistRomanBold.ttf
+          weight: 700
+        - asset: assets/fonts/UrbanistSemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/UrbanistRegular.ttf
+          weight: 400
+        - asset: assets/fonts/UrbanistRomanMedium.ttf
+          weight: 500
+        - asset: assets/fonts/UrbanistRomanBlack.ttf
+          weight: 900
